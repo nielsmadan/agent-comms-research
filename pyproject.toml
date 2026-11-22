@@ -1,0 +1,37 @@
+[project]
+name = "agentcomms"
+version = "0.1.0"
+description = "Harness comparing ways to push a message into a running coding-agent TUI"
+requires-python = ">=3.14"
+dependencies = [
+    "iterm2>=2.30",
+]
+
+[project.scripts]
+agentcomms = "agentcomms.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["uv_build>=0.8,<0.14"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-root = ""
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-exclude = ["runs", "vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]
+ignore = ["E702", "RUF001", "RUF012"]
+
+[tool.ruff.lint.per-file-ignores]
+"agentcomms/model.py" = ["E501"]
+"agentcomms/senders/*.py" = ["UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

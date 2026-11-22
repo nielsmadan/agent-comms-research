@@ -1,0 +1,6 @@
+│ Confirm /compress                                                  │
+│                                                                    │
+│ Compress session 78bcd563-c773-4f1d-8d11-7b57c0d0bae4?             │
+│ This keeps the session and its visible conversation intact.        │
+│                                                                    │
+│ Enter to confirm, ESC to cancel                                    │

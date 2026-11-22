@@ -1,0 +1,189 @@
+{
+ "runs": {
+  "20261028-185640-d379": "claude#1",
+  "20261028-185652-4b81": "claude#2",
+  "20261028-185705-b03a": "codex#1",
+  "20261028-185717-f7bf": "codex#2",
+  "20261028-185729-baff": "pi#1",
+  "20261028-185742-db3d": "pi#2",
+  "20261028-185754-c2a6": "opencode#1",
+  "20261028-185806-dad6": "droid#1"
+ },
+ "mix": [
+  {
+   "label": "claude#1",
+   "agent": "claude",
+   "mechanism": "claude-channel"
+  },
+  {
+   "label": "claude#2",
+   "agent": "claude",
+   "mechanism": "claude-channel"
+  },
+  {
+   "label": "codex#1",
+   "agent": "codex",
+   "mechanism": "codex-remote-start"
+  },
+  {
+   "label": "codex#2",
+   "agent": "codex",
+   "mechanism": "codex-remote-start"
+  },
+  {
+   "label": "pi#1",
+   "agent": "pi",
+   "mechanism": "pi-ext"
+  },
+  {
+   "label": "pi#2",
+   "agent": "pi",
+   "mechanism": "pi-ext"
+  },
+  {
+   "label": "opencode#1",
+   "agent": "opencode",
+   "mechanism": "opencode-server-queue"
+  },
+  {
+   "label": "droid#1",
+   "agent": "droid",
+   "mechanism": "tmux-paste"
+  }
+ ],
+ "launch_s": 6.2,
+ "delivered": [
+  24,
+  24
+ ],
+ "acked": [
+  24,
+  24
+ ],
+ "latency": {
+  "n": 24,
+  "min": 0.002,
+  "median": 0.022,
+  "max": 0.519
+ },
+ "per_agent": {
+  "claude": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.014,
+    "median": 0.020999999999999998,
+    "max": 0.037
+   }
+  },
+  "codex": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.037,
+    "median": 0.122,
+    "max": 0.519
+   }
+  },
+  "pi": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.002,
+    "median": 0.0045000000000000005,
+    "max": 0.009
+   }
+  },
+  "opencode": {
+   "delivered": [
+    3,
+    3
+   ],
+   "latency": {
+    "n": 3,
+    "min": 0.012,
+    "median": 0.019,
+    "max": 0.031
+   }
+  },
+  "droid": {
+   "delivered": [
+    3,
+    3
+   ],
+   "latency": {
+    "n": 3,
+    "min": 0.14,
+    "median": 0.159,
+    "max": 0.332
+   }
+  }
+ },
+ "load": {
+  "launch": {
+   "samples": 1,
+   "processes_max": 22,
+   "total_rss_mb_peak": 2994.2,
+   "total_rss_mb_median": 2994.2,
+   "total_cpu_pct_peak": 142.3,
+   "total_cpu_pct_median": 142.3,
+   "per_receiver_rss_mb_peak": {
+    "claude#1": 361.6,
+    "claude#2": 372.9,
+    "codex#1": 310.0,
+    "codex#2": 312.4,
+    "droid#1": 408.5,
+    "opencode#1": 811.2,
+    "pi#1": 206.5,
+    "pi#2": 211.1
+   },
+   "per_receiver_cpu_pct_peak": {
+    "claude#1": 20.1,
+    "claude#2": 17.2,
+    "codex#1": 22.6,
+    "codex#2": 21.2,
+    "droid#1": 33.7,
+    "opencode#1": 17.7,
+    "pi#1": 5.2,
+    "pi#2": 4.6
+   }
+  },
+  "messages": {
+   "samples": 1,
+   "processes_max": 24,
+   "total_rss_mb_peak": 3219.7,
+   "total_rss_mb_median": 3219.7,
+   "total_cpu_pct_peak": 22.1,
+   "total_cpu_pct_median": 22.1,
+   "per_receiver_rss_mb_peak": {
+    "claude#1": 373.8,
+    "claude#2": 392.2,
+    "codex#1": 359.6,
+    "codex#2": 361.0,
+    "droid#1": 435.1,
+    "opencode#1": 876.5,
+    "pi#1": 208.3,
+    "pi#2": 213.2
+   },
+   "per_receiver_cpu_pct_peak": {
+    "claude#1": 1.0,
+    "claude#2": 7.3,
+    "codex#1": 3.1,
+    "codex#2": 2.6,
+    "droid#1": 3.0,
+    "opencode#1": 5.1,
+    "pi#1": 0.0,
+    "pi#2": 0.0
+   }
+  }
+ }
+}

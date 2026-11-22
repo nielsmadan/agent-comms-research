@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@vanillagreen/pi-session-bridge": "3.0.1"
+  }
+}

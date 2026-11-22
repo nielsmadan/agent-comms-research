@@ -1,0 +1,50 @@
+   Requested exact reply code    +                                                                                                                                                                      
+                                                                                                                                                                                                        
+  ┃                                                                                                                                                             Requested exact reply code              
+  ┃  Reply with exactly HUMAN-4de578df and nothing else.                                                                                                                                                
+  ┃                                                                                                                                                             Context                                 
+                                                                                                                                                                13,674 tokens                           
+     HUMAN-4de578df                                                                                                                                             1% used                                 
+                                                                                                                                                                $0.00 spent                             
+     Build · GPT-6 Luna · 1.2s · 10.6 tok/s                                                                                                                                                             
+                                                                                                                                                                                                        
+  ┃                                                                                                                                                                                                     
+  ┃  ACK-REQUEST 09adaa57: reply with exactly "ACK 09adaa57". This message was pushed while a human was attached to your terminal.                                                                      
+  ┃                                                                                                                                                                                                     
+                                                                                                                                                                                                        
+     ACK 09adaa57                                                                                                                                                                                       
+                                                                                                                                                                                                        
+     Build · GPT-6 Luna · 1.2s · 16.5 tok/s                                                                                                                                                             
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+                                                                                                                                                                                                        
+  ┃                                                                                                                                                                                                     
+  ┃                                                                                                                                                                                                     
+  ┃                                                                                                                                                                                                     
+  ┃  Build auto · GPT-6 Luna OpenCode Go                                                                                                                                                                
+  ╹▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀                                            
+  /Users/me/wrksp/_scratch/agent-comms/runs/20261027-215559-02ec/work/opencode:main                              13.7K (1%) · $0.00  ctrl+p commands    /…/20261027-215559…/work/opencode:main  
+                                                                                                                                                                                                        

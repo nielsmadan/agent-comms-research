@@ -1,0 +1,1162 @@
+[
+ {
+  "host": "tmux",
+  "adapter": "tmux-keys",
+  "blocked": null,
+  "notes": [],
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "absent",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     11,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     28,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     59,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     6,
+     3,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     30,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1002,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 0,
+   "detail": ""
+  }
+ },
+ {
+  "host": "tmux",
+  "adapter": "tmux-paste",
+  "blocked": null,
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     40,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ },
+ {
+  "host": "tmux",
+  "adapter": "tmux-paste-retry",
+  "blocked": null,
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     40,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ },
+ {
+  "host": "tmux",
+  "adapter": "tmux-buffer",
+  "blocked": null,
+  "summary": {
+   "fidelity": "6/7 exact; multiline newline-translated: LF arrives as CR",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {
+    "multiline": "newline-translated: LF arrives as CR"
+   }
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "newline-translated",
+    "detail": "LF arrives as CR",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     40,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ },
+ {
+  "host": "zmx",
+  "adapter": "zmx-send",
+  "blocked": null,
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "absent",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     11,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     28,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     59,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     30,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1002,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 0,
+   "detail": ""
+  }
+ },
+ {
+  "host": "zmx",
+  "adapter": "zmx-paste",
+  "blocked": null,
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     40,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ },
+ {
+  "host": "zellij",
+  "adapter": "zellij-write",
+  "blocked": null,
+  "notes": [],
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "absent",
+   "chunking": "long: 10 reads, max 1022 B",
+   "burst": "5/5 in order",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     11,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     28,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     59,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     30,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1003
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 0,
+   "detail": ""
+  }
+ },
+ {
+  "host": "zellij",
+  "adapter": "zellij-paste",
+  "blocked": null,
+  "notes": [],
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     6,
+     34,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ },
+ {
+  "host": "iterm2",
+  "adapter": "iterm2-text",
+  "blocked": null,
+  "notes": [
+   "iterm-focus ASN:0x0-0xbe0be:/pty-1DB8B621-02D1-416D-AD1A-157BAE495A90 -> ASN:0x0-0xbe0be:/pty-1DB8B621-02D1-416D-AD1A-157BAE495A90"
+  ],
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "absent",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     11,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     28,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     59,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     9,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     30,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "absent",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1002,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 0,
+   "detail": ""
+  }
+ },
+ {
+  "host": "iterm2",
+  "adapter": "iterm2-paste",
+  "blocked": null,
+  "notes": [],
+  "summary": {
+   "fidelity": "7/7 exact",
+   "markers": "wrapped",
+   "chunking": "long: 11 reads, max 1022 B",
+   "burst": "5/5 in order, 5 paste regions",
+   "submit": "0d",
+   "failing": {}
+  },
+  "cases": [
+   {
+    "case": "plain",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     23,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "multiline",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     40,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "quotes",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     71,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "semicolons",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "tab",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     21,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "unicode",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     42,
+     1
+    ],
+    "marker_split": false
+   },
+   {
+    "case": "long",
+    "fidelity": "exact",
+    "detail": "",
+    "markers": "wrapped",
+    "submit": "0d",
+    "sizes": [
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1022,
+     1014,
+     1
+    ],
+    "marker_split": false
+   }
+  ],
+  "burst": {
+   "in_order": true,
+   "received": 5,
+   "expected": 5,
+   "paste_regions": 5,
+   "detail": ""
+  }
+ }
+]

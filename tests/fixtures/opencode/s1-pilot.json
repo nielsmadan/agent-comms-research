@@ -1,0 +1,81 @@
+{
+ "schema": [
+  "CREATE TABLE `session_inbox` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `payload` text NOT NULL,\n          `delivery` text NOT NULL,\n          `enqueued_seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `fk_session_inbox_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_message` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          `data` text NOT NULL,\n          CONSTRAINT `fk_session_message_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_pending` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `data` text NOT NULL,\n          `delivery` text,\n          `admitted_seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `fk_session_pending_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_v2` (\n          `id` text PRIMARY KEY,\n          `project_id` text NOT NULL,\n          `workspace_id` text,\n          `parent_id` text,\n          `fork_session_id` text,\n          `fork_boundary` text,\n          `slug` text NOT NULL,\n          `directory` text NOT NULL,\n          `path` text,\n          `title` text,\n          `version` text NOT NULL,\n          `share_url` text,\n          `summary_additions` integer,\n          `summary_deletions` integer,\n          `summary_files` integer,\n          `summary_diffs` text,\n          `metadata` text,\n          `cost` real DEFAULT 0 NOT NULL,\n          `tokens_input` integer DEFAULT 0 NOT NULL,\n          `tokens_output` integer DEFAULT 0 NOT NULL,\n          `tokens_reasoning` integer DEFAULT 0 NOT NULL,\n          `tokens_cache_read` integer DEFAULT 0 NOT NULL,\n          `tokens_cache_write` integer DEFAULT 0 NOT NULL,\n          `revert` text,\n          `permission` text,\n          `agent` text,\n          `model` text,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          `time_idle` integer,\n          `time_viewed` integer,\n          `idle_outcome` text,\n          `time_compacting` integer,\n          `time_archived` integer,\n          `time_suspended` integer,\n          `resume_attempts` integer DEFAULT 0 NOT NULL,\n          CONSTRAINT `fk_session_v2_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n        )"
+ ],
+ "rows": {
+  "session_v2": [
+   {
+    "id": "ses_e905308ccffeeXSjW1kXCCAOY0",
+    "project_id": "2538e4dabfaf05b7c061d48f944aa6734c6ea1b3",
+    "workspace_id": null,
+    "parent_id": null,
+    "fork_session_id": null,
+    "fork_boundary": null,
+    "slug": "glowing-island",
+    "directory": "/Users/me/wrksp/_scratch/agent-comms/runs/20261024-154928-e5ee/work/opencode",
+    "path": "runs/20261024-154928-e5ee/work/opencode",
+    "title": "Agentcomms idle-wake test",
+    "version": "2.1.4",
+    "share_url": null,
+    "summary_additions": null,
+    "summary_deletions": null,
+    "summary_files": null,
+    "summary_diffs": null,
+    "metadata": null,
+    "cost": 0.0017591,
+    "tokens_input": 476,
+    "tokens_output": 20,
+    "tokens_reasoning": 0,
+    "tokens_cache_read": 0,
+    "tokens_cache_write": 13612,
+    "revert": null,
+    "permission": null,
+    "agent": "build",
+    "model": "{\"id\":\"gpt-6-luna\",\"providerID\":\"opencode-go\"}",
+    "time_created": 1792874972906,
+    "time_updated": 1792874974406,
+    "time_idle": 1792874974410,
+    "time_viewed": null,
+    "idle_outcome": "succeeded",
+    "time_compacting": null,
+    "time_archived": null,
+    "time_suspended": null,
+    "resume_attempts": 0
+   }
+  ],
+  "session_message": [
+   {
+    "id": "msg_16fad0698001NRsPt96Syw2bsj",
+    "session_id": "ses_e905308ccffeeXSjW1kXCCAOY0",
+    "type": "user",
+    "seq": 4,
+    "time_created": 1792874972931,
+    "time_updated": 1792874972932,
+    "data": "{\"time\": {\"created\": 1792874972931}, \"text\": \"ACK-REQUEST c87261aa: reply with exactly \\\"ACK c87261aa\\\". This is an idle-wake test from the agentcomms harness; no other action is needed.\", \"files\": [], \"agents\": []}"
+   },
+   {
+    "id": "msg_16fad070d001UJ0BRvpmFLwTdd",
+    "session_id": "ses_e905308ccffeeXSjW1kXCCAOY0",
+    "type": "assistant",
+    "seq": 7,
+    "time_created": 1792874972947,
+    "time_updated": 1792874974406,
+    "data": "{\"time\": {\"created\": 1792874972947, \"streamed\": 1792874974375, \"completed\": 1792874974406}, \"agent\": \"build\", \"model\": {\"id\": \"gpt-6-luna\", \"providerID\": \"opencode-go\", \"variant\": \"default\"}, \"content\": [{\"type\": \"text\", \"text\": \"ACK c87261aa\"}], \"snapshot\": {\"start\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"end\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"files\": []}, \"finish\": \"stop\", \"cost\": 0.0017063, \"tokens\": {\"input\": 3, \"output\": 9, \"reasoning\": 0, \"cache\": {\"read\": 0, \"write\": 13612}}}"
+   },
+   {
+    "id": "msg_16fad0cca002ABSPZVORqzpnxy",
+    "session_id": "ses_e905308ccffeeXSjW1kXCCAOY0",
+    "type": "idle",
+    "seq": 12,
+    "time_created": 1792874974410,
+    "time_updated": 1792874974411,
+    "data": "{\"time\": {\"created\": 1792874974410}, \"outcome\": \"succeeded\"}"
+   }
+  ],
+  "session_inbox": [],
+  "session_pending": []
+ }
+}

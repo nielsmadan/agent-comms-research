@@ -1,0 +1,19 @@
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Only showing models from configured providers. Use /login to add providers.
+>
+→ ✓ deepseek/deepseek-v4.1-flash [openrouter] · default
+    claude-fable-5 [opencode]
+    claude-fable-5-1 [opencode]
+    claude-haiku-4-5 [opencode]
+    claude-haiku-5-5 [opencode]
+    claude-opus-4-5 [opencode]
+    claude-opus-4-6 [opencode]
+    claude-opus-4-7 [opencode]
+    claude-opus-4-8 [opencode]
+    claude-opus-5 [opencode]
+  (1/509)
+  Model Name: DeepSeek: DeepSeek V4.1 Flash
+  Model catalogs refreshed.
+  Enter to select · Ctrl+S to set as default · Escape/Ctrl+C to cancel
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+0.0%/1.0M (auto)                                                                                                                                (openrouter) deepseek/deepseek-v4.1-flash • thinking off

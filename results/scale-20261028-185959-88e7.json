@@ -1,0 +1,164 @@
+{
+ "runs": {
+  "20261028-185959-88e7": "claude#1",
+  "20261028-190011-08df": "claude#2",
+  "20261028-190024-e82e": "codex#1",
+  "20261028-190037-3801": "codex#2",
+  "20261028-190050-8da8": "pi#1",
+  "20261028-190103-7997": "pi#2",
+  "20261028-190115-e7b4": "opencode#1",
+  "20261028-190127-2544": "droid#1"
+ },
+ "mix": [
+  {
+   "label": "claude#1",
+   "agent": "claude",
+   "mechanism": "claude-channel"
+  },
+  {
+   "label": "claude#2",
+   "agent": "claude",
+   "mechanism": "claude-channel"
+  },
+  {
+   "label": "codex#1",
+   "agent": "codex",
+   "mechanism": "codex-remote-start"
+  },
+  {
+   "label": "codex#2",
+   "agent": "codex",
+   "mechanism": "codex-remote-start"
+  },
+  {
+   "label": "pi#1",
+   "agent": "pi",
+   "mechanism": "pi-ext"
+  },
+  {
+   "label": "pi#2",
+   "agent": "pi",
+   "mechanism": "pi-ext"
+  },
+  {
+   "label": "opencode#1",
+   "agent": "opencode",
+   "mechanism": "opencode-server-queue"
+  },
+  {
+   "label": "droid#1",
+   "agent": "droid",
+   "mechanism": "tmux-paste"
+  }
+ ],
+ "launch_s": 5.2,
+ "delivered": [
+  24,
+  24
+ ],
+ "acked": [
+  24,
+  24
+ ],
+ "latency": {
+  "n": 24,
+  "min": 0.003,
+  "median": 0.031,
+  "max": 0.588
+ },
+ "per_agent": {
+  "claude": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.014,
+    "median": 0.0295,
+    "max": 0.075
+   }
+  },
+  "codex": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.081,
+    "median": 0.105,
+    "max": 0.588
+   }
+  },
+  "pi": {
+   "delivered": [
+    6,
+    6
+   ],
+   "latency": {
+    "n": 6,
+    "min": 0.003,
+    "median": 0.0045000000000000005,
+    "max": 0.011
+   }
+  },
+  "opencode": {
+   "delivered": [
+    3,
+    3
+   ],
+   "latency": {
+    "n": 3,
+    "min": 0.012,
+    "median": 0.015,
+    "max": 0.022
+   }
+  },
+  "droid": {
+   "delivered": [
+    3,
+    3
+   ],
+   "latency": {
+    "n": 3,
+    "min": 0.148,
+    "median": 0.172,
+    "max": 0.529
+   }
+  }
+ },
+ "load": {
+  "launch": {
+   "samples": 0
+  },
+  "messages": {
+   "samples": 3,
+   "processes_max": 24,
+   "total_rss_mb_peak": 3399.5,
+   "total_rss_mb_median": 3376.7,
+   "total_cpu_pct_peak": 16.4,
+   "total_cpu_pct_median": 11.2,
+   "per_receiver_rss_mb_peak": {
+    "claude#1": 391.7,
+    "claude#2": 386.9,
+    "codex#1": 451.5,
+    "codex#2": 445.6,
+    "droid#1": 446.0,
+    "opencode#1": 901.8,
+    "pi#1": 193.7,
+    "pi#2": 192.4
+   },
+   "per_receiver_cpu_pct_peak": {
+    "claude#1": 3.0,
+    "claude#2": 1.9,
+    "codex#1": 2.7,
+    "codex#2": 3.4,
+    "droid#1": 4.2,
+    "opencode#1": 3.2,
+    "pi#1": 0.0,
+    "pi#2": 0.0
+   }
+  }
+ }
+}

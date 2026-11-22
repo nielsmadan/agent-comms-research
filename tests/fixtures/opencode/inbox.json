@@ -1,0 +1,154 @@
+{
+ "schema": [
+  "CREATE TABLE `session_inbox` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `payload` text NOT NULL,\n          `delivery` text NOT NULL,\n          `enqueued_seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `fk_session_inbox_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_message` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          `data` text NOT NULL,\n          CONSTRAINT `fk_session_message_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_pending` (\n          `id` text PRIMARY KEY,\n          `session_id` text NOT NULL,\n          `type` text NOT NULL,\n          `data` text NOT NULL,\n          `delivery` text,\n          `admitted_seq` integer NOT NULL,\n          `time_created` integer NOT NULL,\n          CONSTRAINT `fk_session_pending_session_id_session_v2_id_fk` FOREIGN KEY (`session_id`) REFERENCES `session_v2`(`id`) ON DELETE CASCADE\n        )",
+  "CREATE TABLE `session_v2` (\n          `id` text PRIMARY KEY,\n          `project_id` text NOT NULL,\n          `workspace_id` text,\n          `parent_id` text,\n          `fork_session_id` text,\n          `fork_boundary` text,\n          `slug` text NOT NULL,\n          `directory` text NOT NULL,\n          `path` text,\n          `title` text,\n          `version` text NOT NULL,\n          `share_url` text,\n          `summary_additions` integer,\n          `summary_deletions` integer,\n          `summary_files` integer,\n          `summary_diffs` text,\n          `metadata` text,\n          `cost` real DEFAULT 0 NOT NULL,\n          `tokens_input` integer DEFAULT 0 NOT NULL,\n          `tokens_output` integer DEFAULT 0 NOT NULL,\n          `tokens_reasoning` integer DEFAULT 0 NOT NULL,\n          `tokens_cache_read` integer DEFAULT 0 NOT NULL,\n          `tokens_cache_write` integer DEFAULT 0 NOT NULL,\n          `revert` text,\n          `permission` text,\n          `agent` text,\n          `model` text,\n          `time_created` integer NOT NULL,\n          `time_updated` integer NOT NULL,\n          `time_idle` integer,\n          `time_viewed` integer,\n          `idle_outcome` text,\n          `time_compacting` integer,\n          `time_archived` integer,\n          `time_suspended` integer,\n          `resume_attempts` integer DEFAULT 0 NOT NULL,\n          CONSTRAINT `fk_session_v2_project_id_project_id_fk` FOREIGN KEY (`project_id`) REFERENCES `project`(`id`) ON DELETE CASCADE\n        )"
+ ],
+ "rows": {
+  "session_v2": [
+   {
+    "id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "project_id": "2538e4dabfaf05b7c061d48f944aa6734c6ea1b3",
+    "workspace_id": null,
+    "parent_id": null,
+    "fork_session_id": null,
+    "fork_boundary": null,
+    "slug": "crisp-garden",
+    "directory": "/Users/me/wrksp/_scratch/agent-comms/runs/20261024-154209-3fff/work/opencode",
+    "path": "runs/20261024-154209-3fff/work/opencode",
+    "title": "ACK request cafe0002",
+    "version": "2.1.4",
+    "share_url": null,
+    "summary_additions": null,
+    "summary_deletions": null,
+    "summary_files": null,
+    "summary_diffs": null,
+    "metadata": null,
+    "cost": 0.002259735,
+    "tokens_input": 465,
+    "tokens_output": 71,
+    "tokens_reasoning": 88,
+    "tokens_cache_read": 40936,
+    "tokens_cache_write": 13795,
+    "revert": null,
+    "permission": null,
+    "agent": "build",
+    "model": "{\"id\":\"gpt-6-luna\",\"providerID\":\"opencode-go\"}",
+    "time_created": 1792874550751,
+    "time_updated": 1792874673247,
+    "time_idle": 1792874625672,
+    "time_viewed": null,
+    "idle_outcome": "succeeded",
+    "time_compacting": null,
+    "time_archived": null,
+    "time_suspended": 1792874657143,
+    "resume_attempts": 0
+   }
+  ],
+  "session_message": [
+   {
+    "id": "msg_16fa69591001tWW1KLEejYMyXR",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "user",
+    "seq": 4,
+    "time_created": 1792874550778,
+    "time_updated": 1792874550779,
+    "data": "{\"time\": {\"created\": 1792874550778}, \"text\": \"ACK-REQUEST cafe0002: reply with exactly \\\"ACK cafe0002\\\". probe\", \"files\": [], \"agents\": []}"
+   },
+   {
+    "id": "msg_16fa69606001mHFJoXE05vm5vC",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "assistant",
+    "seq": 5,
+    "time_created": 1792874550797,
+    "time_updated": 1792874552223,
+    "data": "{\"time\": {\"created\": 1792874550797, \"streamed\": 1792874552185, \"completed\": 1792874552222}, \"agent\": \"build\", \"model\": {\"id\": \"gpt-6-luna\", \"providerID\": \"opencode-go\", \"variant\": \"default\"}, \"content\": [{\"type\": \"reasoning\", \"text\": \"\", \"time\": {\"created\": 1792874552001, \"completed\": 1792874552061}}, {\"type\": \"text\", \"text\": \"ACK cafe0002\"}], \"snapshot\": {\"start\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"end\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"files\": []}, \"finish\": \"stop\", \"cost\": 0.001708675, \"tokens\": {\"input\": 3, \"output\": 10, \"reasoning\": 9, \"cache\": {\"read\": 0, \"write\": 13591}}}"
+   },
+   {
+    "id": "msg_16fa69ba0001NXQaxpnttCN8Nf",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "idle",
+    "seq": 12,
+    "time_created": 1792874552224,
+    "time_updated": 1792874552224,
+    "data": "{\"time\": {\"created\": 1792874552224}, \"outcome\": \"succeeded\"}"
+   },
+   {
+    "id": "msg_16fa74c740019xyHhrLXBuKXVZ",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "user",
+    "seq": 17,
+    "time_created": 1792874597507,
+    "time_updated": 1792874597507,
+    "data": "{\"time\": {\"created\": 1792874597507}, \"text\": \"Run the shell command `sleep 25` with your bash tool, then reply DONE.\", \"files\": [], \"agents\": []}"
+   },
+   {
+    "id": "msg_16fa74c85001DQ6hDXYFiTQcXf",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "assistant",
+    "seq": 18,
+    "time_created": 1792874597515,
+    "time_updated": 1792874623967,
+    "data": "{\"time\": {\"created\": 1792874597515, \"streamed\": 1792874598895, \"completed\": 1792874623966}, \"agent\": \"build\", \"model\": {\"id\": \"gpt-6-luna\", \"providerID\": \"opencode-go\", \"variant\": \"default\"}, \"content\": [{\"type\": \"reasoning\", \"text\": \"\", \"time\": {\"created\": 1792874598438, \"completed\": 1792874598720}}, {\"type\": \"tool\", \"id\": \"call_dkrP2pPIMPPZBjT1ru1hTanF\", \"name\": \"shell\", \"executed\": false, \"state\": {\"status\": \"completed\", \"input\": {\"command\": \"sleep 25\"}, \"content\": [{\"type\": \"text\", \"text\": \"(no output)\"}], \"metadata\": {\"status\": \"completed\", \"truncated\": false, \"exit\": 0}}, \"time\": {\"created\": 1792874598724, \"ran\": 1792874598870, \"completed\": 1792874623933}}], \"snapshot\": {\"start\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"end\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"files\": []}, \"finish\": \"tool-calls\", \"cost\": 0.000162585, \"tokens\": {\"input\": 3, \"output\": 21, \"reasoning\": 21, \"cache\": {\"read\": 13591, \"write\": 43}}}"
+   },
+   {
+    "id": "msg_16fa7640b0012fOdgLCAgf315h",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "user",
+    "seq": 28,
+    "time_created": 1792874623972,
+    "time_updated": 1792874623973,
+    "data": "{\"time\": {\"created\": 1792874623972}, \"text\": \"ACK-REQUEST cafe0003: reply with exactly \\\"ACK cafe0003\\\". queued probe\", \"files\": [], \"agents\": []}"
+   },
+   {
+    "id": "msg_16fa7b3e7001E3TGLJDHy5syFV",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "assistant",
+    "seq": 29,
+    "time_created": 1792874623981,
+    "time_updated": 1792874625671,
+    "data": "{\"time\": {\"created\": 1792874623981, \"streamed\": 1792874625643, \"completed\": 1792874625670}, \"agent\": \"build\", \"model\": {\"id\": \"gpt-6-luna\", \"providerID\": \"opencode-go\", \"variant\": \"default\"}, \"content\": [{\"type\": \"reasoning\", \"text\": \"\", \"time\": {\"created\": 1792874624985, \"completed\": 1792874625513}}, {\"type\": \"text\", \"text\": \"ACK cafe0003\"}], \"snapshot\": {\"start\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"end\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"files\": []}, \"finish\": \"stop\", \"cost\": 0.00017626500000000002, \"tokens\": {\"input\": 3, \"output\": 10, \"reasoning\": 50, \"cache\": {\"read\": 13634, \"write\": 77}}}"
+   },
+   {
+    "id": "msg_16fa7ba88001E3mbR9bgYJBbTJ",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "idle",
+    "seq": 36,
+    "time_created": 1792874625672,
+    "time_updated": 1792874625672,
+    "data": "{\"time\": {\"created\": 1792874625672}, \"outcome\": \"succeeded\"}"
+   },
+   {
+    "id": "msg_16fa8356d001pMWGIzLxNrbkpI",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "user",
+    "seq": 39,
+    "time_created": 1792874657147,
+    "time_updated": 1792874657147,
+    "data": "{\"time\": {\"created\": 1792874657147}, \"text\": \"Run the shell command `sleep 15` with your bash tool, then reply DONE.\", \"files\": [], \"agents\": []}"
+   },
+   {
+    "id": "msg_16fa8357e001nTFGvILown6mlS",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "assistant",
+    "seq": 40,
+    "time_created": 1792874657156,
+    "time_updated": 1792874673248,
+    "data": "{\"time\": {\"created\": 1792874657156, \"streamed\": 1792874658229, \"completed\": 1792874673247}, \"agent\": \"build\", \"model\": {\"id\": \"gpt-6-luna\", \"providerID\": \"opencode-go\", \"variant\": \"default\"}, \"content\": [{\"type\": \"reasoning\", \"text\": \"\", \"time\": {\"created\": 1792874657958, \"completed\": 1792874658090}}, {\"type\": \"tool\", \"id\": \"call_vTwzNNndrRo8sJlCGnvzdogs\", \"name\": \"shell\", \"executed\": false, \"state\": {\"status\": \"completed\", \"input\": {\"command\": \"sleep 15\"}, \"content\": [{\"type\": \"text\", \"text\": \"(no output)\"}], \"metadata\": {\"status\": \"completed\", \"truncated\": false, \"exit\": 0}}, \"time\": {\"created\": 1792874658091, \"ran\": 1792874658197, \"completed\": 1792874673216}}], \"snapshot\": {\"start\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"end\": \"56dd39ad6b4f50abf8fc7113f49511a1482030b0\", \"files\": []}, \"finish\": \"tool-calls\", \"cost\": 0.00016241, \"tokens\": {\"input\": 3, \"output\": 21, \"reasoning\": 8, \"cache\": {\"read\": 13711, \"write\": 84}}}"
+   }
+  ],
+  "session_inbox": [
+   {
+    "id": "msg_16fa84cfb001ugoP2ygs0L1PEx",
+    "session_id": "ses_e9059bb34ffezw9tIhR5GVbPVZ",
+    "type": "user",
+    "payload": "{\"text\":\"ACK-REQUEST cafe0004: reply with exactly \\\"ACK cafe0004\\\". queued probe\",\"files\":[],\"agents\":[]}",
+    "delivery": "steer",
+    "enqueued_seq": 47,
+    "time_created": 1792874663170
+   }
+  ],
+  "session_pending": []
+ }
+}

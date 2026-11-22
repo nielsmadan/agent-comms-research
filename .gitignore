@@ -1,0 +1,17 @@
+runs/
+vendor/node_modules
+.uv/
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+vendor/*/node_modules/
+vendor/_review/
+vendor/.npm-cache/
+vendor/bin/
+vendor/hcom/bin/
+vendor/agent-intercom-*/
+vendor/claude-session-driver/
+vendor/agent-deck/bin/
+vendor/gc/bin/
+vendor/agents/
