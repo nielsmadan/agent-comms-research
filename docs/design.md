@@ -1,7 +1,7 @@
 # Design decisions
 
 Why the harness works the way it does, and what a later run (e.g. on the Mac Studio) must keep. How things work is in
-`README.md`; results are in `REPORT.md`.
+`docs/harness.md`; results are in `REPORT.md`.
 
 The harness, `REPORT.md` and `results/` cite rulings from the build run by id (R9 … R51). Those ids resolve here, in
 parentheses after the decision they name. Ids that appear nowhere in this file were about running the build (commit
@@ -25,7 +25,7 @@ policy, task chunking, fix rounds) and do not constrain later work.
   (`sun_path` is at most 104 bytes on macOS), which is why sockets live in `/tmp/ac/<run>…` and not under `runs/`.
 - **Read-only:** the user's agent configs and stores (`~/.claude*`, `~/.codex`, `~/.pi`, `~/.config/opencode`,
   `~/.local/share/opencode`, `~/.factory`), `~/ac`, `~/rc`, `~/.gc`, `~/wrksp/_external/*` (copy into `vendor/` to
-  build) and plugin caches. Pinned agent binaries are copies (`README.md` Setup), never the live installs.
+  build) and plugin caches. Pinned agent binaries are copies (`docs/harness.md` Setup), never the live installs.
 - **Never run:** `codex app-server daemon stop|restart|update|bootstrap` against the user's daemon; `claude
   stop|respawn|rm` on a session the manifest does not own; `opencode service …` outside an isolated home; any `gc`
   command against the user's city (`tmux -L cadet-city`); `tmux kill-server` on any server but `-L agentcomms` and
@@ -46,7 +46,7 @@ policy, task chunking, fix rounds) and do not constrain later work.
 
 ## Isolation
 
-Every test session gets an isolated home under `runs/<run_id>/home/<agent>/` (table in `README.md`). Decisions
+Every test session gets an isolated home under `runs/<run_id>/home/<agent>/` (table in `docs/harness.md`). Decisions
 beyond that table:
 
 - Isolated Claude excludes every ancestor `CLAUDE.md` (R9). The upward walk from `runs/` reached the user's
@@ -108,7 +108,7 @@ beyond that table:
 | `held` | receiver parked it visibly for a human Deny/Deliver (Claude default inbound) | visible to the human, unlike `lost`; never good (R17) |
 | `error` / `env_error` | harness failure or failed precondition / sleep, network, quota, auth | never a verdict on the mechanism; `env_error` is retried |
 
-Rules behind the scoring in `README.md`:
+Rules behind the scoring in `docs/harness.md`:
 
 - **Receipt allowlist** (R50, R30): only pushed entry kinds (`user`, `peer`, Pi `custom`, `hook`) count as received.
   A token seen only in a `tool_result` means the receiver polled for it, which is not a push. The same rule applies to
@@ -222,7 +222,7 @@ place real config is used, and it trades coverage for safety:
 ## Stops, pauses and exit codes
 
 A stop ends the batch after the running cells so no further paid cells start; a pause is for conditions a later
-`--resume` can fix. Details per code are in `README.md` Commands.
+`--resume` can fix. Details per code are in `docs/harness.md` Commands.
 
 | code | meaning | kind |
 |---|---|---|

@@ -22,14 +22,17 @@ The report also covers what happens when a message arrives mid-turn, while a hum
 | Path | What it is |
 |---|---|
 | [REPORT.md](REPORT.md) | The findings, per agent and per method, with the recommended setup |
-| [results/](results/) | The data behind the report. `raw.jsonl` holds every record; `matrix.md` and `shortlist.md` are generated from it; `notes.md` and `progress.md` are the agent's working notes |
+| [results/](results/) | The data behind the report. [raw.jsonl](results/raw.jsonl) holds every record; [matrix.md](results/matrix.md) and [shortlist.md](results/shortlist.md) are generated from it; [notes.md](results/notes.md) and [progress.md](results/progress.md) are the agent's working notes |
+| [results/screen.md](results/screen.md) | The first screening pass over every candidate method |
+| [results/hostcheck.md](results/hostcheck.md), [results/nono-preflight.md](results/nono-preflight.md) | Checks of the terminal hosts and of the sandbox before testing, with their raw output in `hostcheck.json` and `nono-session-files.txt` |
+| `results/scale-*.json` | The two runs with eight receivers at once |
 | [docs/harness.md](docs/harness.md) | How the test harness works and how to run it |
 | [docs/design.md](docs/design.md) | Design decisions and the numbered rulings (R9 to R51) that the report cites |
 | [docs/enumeration.md](docs/enumeration.md), [docs/research-assumptions.md](docs/research-assumptions.md) | The survey of tools and the background research done before testing |
 | [docs/studio-retest.md](docs/studio-retest.md) | A plan for repeating the key tests on a second machine. Not run yet |
-| `agentcomms/` | The harness. Each delivery method is an adapter in `agentcomms/adapters/` |
+| `agentcomms/` | The harness. Each delivery method is an adapter in `agentcomms/adapters/` ([terminal adapter notes](agentcomms/adapters/README.md)); terminal hosts are in `agentcomms/hosts/` ([notes](agentcomms/hosts/README.md)) |
 | `tests/` | The harness's own test suite |
-| `vendor/` | Version pins and a review log for the third-party bridges that were tested. The bridges themselves are not included |
+| `vendor/` | Version pins and [a review log](vendor/REVIEW.md) for the third-party bridges that were tested. The bridges themselves are not included |
 
 ## Read this before relying on it
 
@@ -37,7 +40,7 @@ The report also covers what happens when a message arrives mid-turn, while a hum
 - **The samples are small.** Most cells have one to five runs, so only failures that happen often would show up. Section 9 of the report lists the measurement limits.
 - **One machine, one setup.** Everything ran on a single MacBook on macOS. Nothing was measured across machines or at more than eight agents.
 - **An agent wrote almost all of it.** The harness, the report and the notes were written by a coding agent working mostly unattended, with my rulings where it asked. I have not checked every number against the raw data.
-- **The paths are mine.** The docs mention local paths such as `~/wrksp` and a secrets wrapper called `sops-exec`. Where a doc says `README.md` for the harness instructions, it now means `docs/harness.md`.
+- **The paths are mine.** The docs mention local paths such as `~/wrksp` and a secrets wrapper called `sops-exec`.
 
 ## What is not in here
 
@@ -53,3 +56,7 @@ Two tools that use the recommended routes:
 
 - [bellhop](https://github.com/nielsmadan/bellhop): deliver a message into a running Claude Code, Codex or Pi session.
 - [callboard](https://github.com/nielsmadan/callboard): chat and mail between agents, built on bellhop.
+
+## License
+
+[MIT](LICENSE), for the code, the report and the data.

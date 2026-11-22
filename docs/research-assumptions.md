@@ -2,7 +2,7 @@
 
 Pre-run research. The run settled several points differently: the tested versions are in `REPORT.md`; the user's
 shared Codex daemon (pid 81588 below) was already down, so the harness runs Codex embedded (`--no-daemon`) or against
-its own isolated daemon; Codex 0.164.0 rejects `approval_policy="untrusted"` (`README.md` Isolation).
+its own isolated daemon; Codex 0.164.0 rejects `approval_policy="untrusted"` (`docs/harness.md` Isolation).
 
 Date: 2026-10-23. Method: local inspection (live files, `--help`, `strings`, `lsof`, read-only sqlite) plus official docs and `gh` (openai/codex). No agent sessions started, nothing installed. One-cycle scope; done by me directly (no workers).
 Legend: [V] verified on this machine or from primary text pasted below. [S] from source/docs only. [U] unverified / inference.
